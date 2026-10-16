@@ -1,3 +1,13 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+  background: 08080b;
+}
+
 
 .logo-section {
   padding: 64px 0;
@@ -46,7 +56,9 @@
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  gap: 80px;
+  justify-content: space-around;
+  min-width: 80vw;
+  box-sizing: border-box;
   padding-right: 80px;
 }
 
@@ -79,13 +91,8 @@
 }
 
 @keyframes logo-marquee {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 @media (max-width: 600px) {
@@ -102,8 +109,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .logo-track {
-    animation: none;
-    transform: none;
-    will-change: auto;
+    animation-duration: 90s;
   }
 }
