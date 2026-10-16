@@ -5,7 +5,7 @@
 
 body{
   margin: 0;
-  background: 08080b;
+  background: #08080b;
 }
 
 
@@ -56,10 +56,8 @@ body{
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: space-around;
-  min-width: 80vw;
-  box-sizing: border-box;
-  padding-right: 80px;
+  gap: clamp(40px, 6vw, 80px);
+  padding-right: clamp(40px, 6vw, 80px); /* igual ao gap */
 }
 
 .logo-group img {
